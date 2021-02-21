@@ -16,7 +16,6 @@ def plot_index_indexthomas03(dataframeentrada,name,indice_ejex,indice_ejey):
 	plt.errorbar(df[indice_ejex][20:40],df[indice_ejey][20:40],yerr=df[indice_ejey+'_err'][20:40], xerr=df[indice_ejex+'_err'][20:40], elinewidth=.5, fmt='*',markersize=7,label=' radial + [20:40]')
 	plt.errorbar(df[indice_ejex][-40:-20],df[indice_ejey][-40:-20],yerr=df[indice_ejey+'_err'][-40:-20], xerr=df[indice_ejex+'_err'][-40:-20], elinewidth=.5, fmt='*',markersize=7,label='radial - [-40:-20]')
 
-	#plt.plot(df[indice_ejex][89],df[indice_ejey][89],color='b',marker='*',ms=20,label='Second nuclei')
 	plt.plot(df[indice_ejex][0],df[indice_ejey][0],color='g',marker='*',ms=20,label='Galaxy center')
 	plt.errorbar(df[indice_ejex][-20:-10],df[indice_ejey][-20:-10],yerr=df[indice_ejey+'_err'][-20:-10], xerr=df[indice_ejex+'_err'][-20:-10], elinewidth=.5, fmt='*',markersize=7,label='radial - [-20:-10]')
 	plt.errorbar(df[indice_ejex][-10:0],df[indice_ejey][-10:0],yerr=df[indice_ejey+'_err'][-10:0], xerr=df[indice_ejex+'_err'][-10:0], elinewidth=.5, fmt='*',markersize=7,label='radial - [-10:0]')
@@ -24,8 +23,7 @@ def plot_index_indexthomas03(dataframeentrada,name,indice_ejex,indice_ejey):
 	plt.errorbar(df[indice_ejex][10:20],df[indice_ejey][10:20],yerr=df[indice_ejey+'_err'][10:20], xerr=df[indice_ejex+'_err'][10:20], elinewidth=.5, fmt='*',markersize=7,label='radial [10:20]')
 	plt.errorbar(df[indice_ejex][40:110],df[indice_ejey][40:110],yerr=df[indice_ejey+'_err'][40:110], xerr=df[indice_ejex+'_err'][40:110], elinewidth=.5, fmt='*',markersize=7,label='radial [40:110]')
 	plt.errorbar(df[indice_ejex][-110:-40],df[indice_ejey][-110:-40],yerr=df[indice_ejey+'_err'][-110:-40], xerr=df[indice_ejex+'_err'][-110:-40], elinewidth=.5, fmt='*',markersize=7,label='radial [-110:-40]')
-#	for i in range(70,118):
-#		plt.annotate('R='+str(df['R'][i]),(df[indice_ejex][i],df[indice_ejey][i]),fontsize=8)
+
 	plt.title(name)
 	plt.xlabel(indice_ejex+'(\AA)')
 	plt.ylabel(indice_ejey+'(\AA)')
