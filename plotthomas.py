@@ -8,7 +8,7 @@ def plot_index_indexthomas03(dataframeentrada,name,indice_ejex,indice_ejey):
 	plt.rc('xtick', labelsize='large')
 	plt.rc('ytick', labelsize='large')
 	#df=pd.read_csv(dataframeentrada,index_col=0)
-	df=pd.read_csv(dataframeentrada,sep=',',index_col='ra')
+	df=pd.read_csv(dataframeentrada,sep=',',index_col='ra') #plot radial data in dependence of radius from 20 to 40 arcsec etc..
 	plt.errorbar(df[indice_ejex][20:40],df[indice_ejey][20:40],yerr=df[indice_ejey+'_err'][20:40], xerr=df[indice_ejex+'_err'][20:40], elinewidth=.5, fmt='*',markersize=7,label=' radial + [20:40]')
 	plt.errorbar(df[indice_ejex][-40:-20],df[indice_ejey][-40:-20],yerr=df[indice_ejey+'_err'][-40:-20], xerr=df[indice_ejex+'_err'][-40:-20], elinewidth=.5, fmt='*',markersize=7,label='radial - [-40:-20]')
 
