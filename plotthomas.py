@@ -2,6 +2,10 @@ import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
 
+#To save you time
+#Plot radial Lick index in index-index diagram with the isochrones of the model of Thomas et al. 2003.
+
+
 def plot_index_indexthomas03(dataframeentrada,name,indice_ejex,indice_ejey):
 	plt.rc('text', usetex=True)
 	plt.rc('font', family='serif')
